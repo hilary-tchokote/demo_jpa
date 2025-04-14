@@ -2,6 +2,8 @@ package fr.esaip.ir5.tthc.bo;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="LIVRE")
 public class Livre implements java.io.Serializable {
@@ -16,6 +18,17 @@ public class Livre implements java.io.Serializable {
 
     @Column(name="AUTEUR", length = 30,nullable = false)
     private String auteur;
+
+    @ManyToMany(mappedBy = "livres")
+    private Set<Emprunt> emprunts ;
+
+    public Set<Emprunt> getEmprunts() {
+        return emprunts;
+    }
+
+    public void setEmprunts(Set<Emprunt> emprunts) {
+        this.emprunts = emprunts;
+    }
 
     public Livre() {
 

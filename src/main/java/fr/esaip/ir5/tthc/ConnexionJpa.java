@@ -11,6 +11,8 @@ public class ConnexionJpa {
 
         EntityManager em = emf.createEntityManager();
 
+        //EntityTransaction et = em.getTransaction();
+
         em.getTransaction().begin();
 
         // R -> CRUD
