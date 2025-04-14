@@ -14,6 +14,9 @@
                 value="mariadb"/>
       <property name="jakarta.persistence.jdbc.driver"
                 value="org.mariadb.jdbc.Driver"/>
+
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
     </properties>
   </persistence-unit>
 </persistence>
